@@ -1,5 +1,5 @@
 export DEBIAN_FRONTEND=noninteractive
-sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/wget --no-check-certificate -O /tmp/squid3-install-remote.sh https://raw.githubusercontent.com/kode27/squid-proxy-install-remoteer/master/squid3-install-remote.sh
+sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/wget --no-check-certificate -O /tmp/squid3-install-remote.sh https://raw.githubusercontent.com/kode27/squid-proxy-remote-installer/main/squid3-install-remote.sh
 sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" chmod 755 /tmp/squid3-install-remote.sh 
 sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /tmp/squid3-install-remote.sh 
 wait
@@ -9,7 +9,7 @@ sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/htpasswd -b -c /etc/squid/passw
 sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" service squid restart
 wait
 relogin
-sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/wget --no-check-certificate -O /tmp/squid-conf-ip.sh https://raw.githubusercontent.com/kode27/squid-proxy-install-remoteer/master/squid-conf-ip-remote.sh
+sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/wget --no-check-certificate -O /tmp/squid-conf-ip-remote.sh https://raw.githubusercontent.com/kode27/squid-proxy-remote-installer/main/squid-conf-ip-remote.sh
 sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" chmod 755 /tmp/squid-conf-ip-remote.sh
 sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /tmp/squid-conf-ip-remote.sh
 wait
