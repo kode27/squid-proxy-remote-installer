@@ -46,6 +46,7 @@ elif cat /etc/*release | grep DISTRIB_DESCRIPTION | grep "Ubuntu 14.04"; then
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" ln -s /etc/squid3 /etc/squid
 elif cat /etc/os-release | grep PRETTY_NAME | grep "jessie"; then
     # OS = Debian 8
+	echo "Debian 8 - Jessie"
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /bin/rm -rf /etc/squid
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt update
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt -y install apache2-utils squid3
@@ -60,6 +61,7 @@ elif cat /etc/os-release | grep PRETTY_NAME | grep "jessie"; then
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" ln -s /etc/squid3 /etc/squid
 elif cat /etc/os-release | grep PRETTY_NAME | grep "stretch"; then
     # OS = Debian 9
+	echo "Debian 9 - Stretch"
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /bin/rm -rf /etc/squid
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt update
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt -y install apache2-utils squid
@@ -73,6 +75,7 @@ elif cat /etc/os-release | grep PRETTY_NAME | grep "stretch"; then
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" systemctl restart squid
 elif cat /etc/os-release | grep PRETTY_NAME | grep "buster"; then
     # OS = Debian 10
+	echo "Debian 10 - Buster"
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /bin/rm -rf /etc/squid
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt update
     sudo DEBIAN_FRONTEND="$DEBIAN_FRONTEND" /usr/bin/apt -y install apache2-utils squid
